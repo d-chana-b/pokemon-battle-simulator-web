@@ -9,7 +9,6 @@ import com.pokemonsimulator.demo.model.Role;
 import com.pokemonsimulator.demo.model.User;
 import com.pokemonsimulator.demo.repository.UserRepository;
 
-import org.hibernate.validator.internal.util.stereotypes.Lazy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
