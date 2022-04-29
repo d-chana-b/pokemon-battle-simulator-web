@@ -22,10 +22,10 @@ public class DefaultController {
         return "index";
     }
 
-    @GetMapping("/admin")
-    public String admin() {
-        return "/admin";
-    }
+    // @GetMapping("/admin")
+    // public String admin() {
+    //     return "/admin";
+    // }
 
     @GetMapping("/user")
     public String user() {
