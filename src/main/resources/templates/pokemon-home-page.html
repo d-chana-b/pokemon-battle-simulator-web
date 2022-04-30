@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Data List</title>
+    <div th:replace="fragments/header :: header-css" />
+</head>
+<body>
+    <div th:replace="fragments/header :: header" />
+    <div class="row flex-nowrap">
+        <div th:replace="fragments/sidebar :: sidebar" />
+        <div class="col py-3">
+            <!--dito mo ilagay ung content per page-->
+            <h1>Pokemon List</h1>
+
+            <a class="btn btn-primary" th:href="@{/admin/addpokemon}" role="button">Add Pokemon</a>
+
+
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Pokedex#</th>
+                    <th scope="col">Pokemon</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Details</th>
+                    <th scope="col">Update</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                  
+                 
+                  
+                  
+                  <tr class="table-info">
+                    <th scope="row">Info</th>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td>Column content</td>
+                    <td><button type="button" class="btn btn-warning">Update</button></td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+
+    <div th:replace="fragments/footer :: footer" />
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pokemon</title>
+    <div th:replace="fragments/header :: header-css" />
+</head>
+
+<body>
+    <div th:replace="fragments/header :: header" />
+    <div class="row flex-nowrap">
+        <div th:replace="fragments/sidebar :: sidebar" />
+        <div class="col py-3">
+            <!--dito mo ilagay ung content per page-->
+            <h1>Add Pokemon</h1>
+            <a th:href="@{/admin/pokemonlist}">return to pokemon list</a>
+            <div class="col-md-auto">
+                <form>
+                    <fieldset>
+                        <div class="form-group mt-2">
+
+                            <input type="pokedexnumber" class="form-control" placeholder="Pokedex#">
+                            <input type="pokemonname" class="form-control" placeholder="Pokemon Name">
+
+                            <label for="exampleSelect1" class="form-label mt-4">Type 1</label>
+                            <select class="form-select" id="exampleSelect1">
+                                <option>Normal</option>
+                                <option>Fire</option>
+                                <option>Water</option>
+                                <option>Grass</option>
+                                <option>Electric</option>
+                                <option>Psychic</option>
+                                <option>Ice</option>
+                                <option>Dark</option>
+                                <option>Dragon</option>
+                                <option>Fighting</option>
+                                <option>Flying</option>
+                                <option>Poison</option>
+                                <option>Ground</option>
+                                <option>Rock</option>
+                                <option>Bug</option>
+                                <option>Ghost</option>
+                                <option>Steel</option>
+                            </select>
+
+                            <label for="exampleSelect2" class="form-label mt-4">Type 2</label>
+                            <select class="form-select" id="exampleSelect2">
+                                <option>---</option>
+                                <option>Normal</option>
+                                <option>Fire</option>
+                                <option>Water</option>
+                                <option>Grass</option>
+                                <option>Electric</option>
+                                <option>Psychic</option>
+                                <option>Ice</option>
+                                <option>Dark</option>
+                                <option>Dragon</option>
+                                <option>Fighting</option>
+                                <option>Flying</option>
+                                <option>Poison</option>
+                                <option>Ground</option>
+                                <option>Rock</option>
+                                <option>Bug</option>
+                                <option>Ghost</option>
+                                <option>Steel</option>
+                            </select>
+
+                            <input type="ability1" class="form-control" placeholder="Ability 1">
+                            <input type="ability2" class="form-control" placeholder="Ability 2">
+                            <input type="hiddenability" class="form-control" placeholder="Hidden Ability">
+
+                            <label class="form-label mt-4">Base Stats</label>
+                            <input type="hiddenability" class="form-control" placeholder="HP">
+                            <input type="hiddenability" class="form-control" placeholder="Attack">
+                            <input type="hiddenability" class="form-control" placeholder="Defense">
+                            <input type="hiddenability" class="form-control" placeholder="Special Attack">
+                            <input type="hiddenability" class="form-control" placeholder="Special Defense">
+                            <input type="hiddenability" class="form-control" placeholder="Speed">
+
+                            <label for="formFile" class="form-label mt-4">Add Image</label>
+                            <input class="form-control" type="file" id="formFile">
+
+
+
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div th:replace="fragments/footer :: footer" />
+</body>
+
+</html>
