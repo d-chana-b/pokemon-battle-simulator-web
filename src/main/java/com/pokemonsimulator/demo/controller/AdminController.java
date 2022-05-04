@@ -11,8 +11,5 @@ public class AdminController {
         return "/admin";
     }
 
-    @GetMapping("/admin/pokemonlist")
-    public String pokemonList(){
-        return "pokemon-home-page";
-    }
+    
 }

@@ -19,7 +19,7 @@ import lombok.Setter;
 public class Pokemon {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pokemonId;
 
     @Column(name="pokedex_number")
@@ -27,7 +27,9 @@ public class Pokemon {
     @Column(name="pokemon_name")
     private String pokemonName;
     private String type1, type2;
-    private String Abilities;//list na lang ba to?
+    //private String Abilities;//list na lang ba to?
+    //ito muna sa ngayon
+    private String ability1,ability2,hiddenAbility;
     private int baseHp, baseAtk, baseDef, baseSpAtk, baseSpDef, baseSpeed;
     private String imageName;
 
