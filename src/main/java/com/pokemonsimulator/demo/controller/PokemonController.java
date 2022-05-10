@@ -75,16 +75,23 @@ public class PokemonController {
     }
 
     @GetMapping("/admin/pokemon/update/{id}")
-    public String updatePokemonDetails(@PathVariable Long id, Model model){
+    public String updatePokemonDetails(@PathVariable Long id, Model model) {
         Optional<Pokemon> pokemon = pokemonService.getPokemonById(id);
+        List<String> types = Arrays.asList("Normal", "Fire", "Water", "Grass", "Electric", "Psychic", "Ice", "Dark",
+                "Dragon", "Fighting", "Flying", "Poison", "Ground", "Rock", "Bug", "Ghost", "Steel");
+        model.addAttribute("types", types);
 
-        if(pokemon.isPresent()){
+        if (pokemon.isPresent()) {
             model.addAttribute("pokemon", pokemon.get());
             return "addpokemon";
-        }else{
+        } else {
             return "404";
         }
     }
 
+    @GetMapping("/admin/pokemon/pokemon-details")
+    public String viewPokemonDetails(){
+        return "pokemondetails";
+    }
 
 }
