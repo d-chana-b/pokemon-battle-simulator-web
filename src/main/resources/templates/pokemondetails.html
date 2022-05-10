@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div th:replace="fragments/header :: header-css" />
+</head>
+
+<body>
+
+    <div th:replace="fragments/header :: header" />
+
+    <div class="row flex-nowrap">
+        <div th:replace="fragments/sidebar :: sidebar" />
+        <div class="col py-3">
+            <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pokemon Name</h4>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link keychainify-checked">Card link</a>
+                  <a href="#" class="card-link keychainify-checked">Another link</a>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div th:replace="fragments/footer :: footer" />
+
+</body>
+
+</html>
