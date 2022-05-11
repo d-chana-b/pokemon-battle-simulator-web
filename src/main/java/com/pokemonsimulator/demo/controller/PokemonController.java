@@ -89,8 +89,9 @@ public class PokemonController {
         }
     }
 
-    @GetMapping("/admin/pokemon/pokemon-details")
-    public String viewPokemonDetails(){
+    @GetMapping("/admin/pokemon/pokemon-details/{id}")
+    public String viewPokemonDetails(Model model, @PathVariable Long id){
+        model.addAttribute("pokemon", pokemonService.getPokemonById(id).get());
         return "pokemondetails";
     }
 
